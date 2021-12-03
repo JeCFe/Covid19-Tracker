@@ -66,14 +66,15 @@ window.addEventListener('load', () => {
             navigator.geolocation.getCurrentPosition((position) => {
                 const lon = position.coords.longitude;
                 const lat = position.coords.latitude;
-                const base = `https://api.geonames.org/countryCodeJSON?lat=${lat}&lng=${lon}&username=jecfe`;
+                const base = `https://open.mapquestapi.com/geocoding/v1/reverse?key=fBzHLAgMFGwK2OQTk9DKi6EQTFjpVlZH&location=${lat},${lon}&outFormat=json`
                 fetch(base)
                     .then((response) => {
                         return response.json();
                     })
                     .then((data) => {
 
-                        const prov = data.countryCode;
+                        const prov = data.results[0].locations[0].adminArea1;
+                        console.log(prov);
                         const lowerprov = prov.toLowerCase();
 
                         const iconUrl = `https://flagcdn.com/h80/${lowerprov}.jpg`;
