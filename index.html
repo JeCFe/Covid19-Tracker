@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Jessica Clara Fealy">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Covid 19 Data</title>
+</head>
+<body>
+<div class="main-wrap">
+    <div class="textcontent">
+    <h1>Covid 19 Tracking</h1>
+        </div>
+        <div class="textcontent">
+            <p>This project has been developed by retrieving and formatting data received from various API sources. Flagcdn, Geonames, Covid19 API and Rest Countries have all been used.</p>
+            <p>This covid tracker will use the geolocation given from the web browser to find the country being connected from, this will allow the users home country data to be first shown. By using ISO country codes all other country covid data is accessible.</p>
+            <p> This application is in early development, with many potential feature changes in the future.</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="column" >
+        <div class="container">
+
+            <div class="InfoContainer">
+                <img src="" alt ="" srcset="" id="country-icon">
+                <div class="Country" >error</div>
+
+                <div class="Info">
+                    <div class="text-content">
+
+                        <div class="TotalPopulation">Error</div>
+                        <div class="TotalCovid">error</div>
+                        <div class="TotalDeaths">error</div>
+                        <div class="NewCases">error</div>
+                        <div class="NewDeaths">error</div>
+                    </div>
+                    <div class ="text-content">
+                      <div class="Subtext">
+                          <u>Quantitative Data</u>
+                      </div>
+                        <div class="Quantitive">
+                            <div><u>Per Million</u></div>
+                            <div class="circle"></div>
+                            <div><u>Percentage</u></div>
+                        </div>
+                        <div class="Quantitive">
+                            <div class="CasesPerMillion">error</div>
+                            <div class="circle"></div>
+                            <div class="CasesPercentage">error</div>
+                        </div>
+                        <div class="Quantitive">
+                            <div class="DeathsPerMillion">error</div>
+                            <div class="circle"></div>
+                            <div class="DeathsPercentage">error</div>
+                        </div>
+
+                    </div>
+                    <div class="text-content">
+                        <div class="Subtext"><u>Compared To Global</u></div>
+                        <div class="Quantitive">
+                            <div><u>Total</u></div>
+                            <div class="circle"></div>
+                            <div><u>Daily</u></div>
+                        </div>
+                        <div class="Quantitive">
+                            <div class="GVCTotal">error</div>
+                            <div class="circle"></div>
+                            <div class="GVCCases">error</div>
+                        </div>
+                        <div class="Quantitive">
+                            <div class="GVCTotalDeaths">error</div>
+                            <div class="circle"></div>
+                            <div class="GVCDeaths">error</div>
+                        </div>
+                        <div class="top-banner">
+                            <form>
+
+                                <input type="text" placeholder="Country Code">
+                                <button type="submit">Submit</button>
+                                <span class="msg"></span>
+                            </form>
+
+                        </div>
+
+                        </div>
+                    <div class="text-content date">
+                    <h4><span class="DateOfResults">No Information Available</span></h4>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column" >
+        <div id = "globalCon">
+        <div class="container">
+            <div class="InfoContainer">
+                <img src="" alt ="" srcset="" id="globalIcon">
+                <div class="Global" >error</div>
+                <div class="Info">
+                    <div class="text-content">
+                        <div class="GTotalCovid">error</div>
+                        <div class="GTotalDeaths">error</div>
+                        <div class="GNewCases">error</div>
+                        <div class="GNewDeaths">error</div>
+                    </div>
+                    <div class="text-content date">
+                        <h4><span class="GDateOfResults">No Information Available</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

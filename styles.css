@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Lora', serif;
+
+    background:url("background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.column2 {
+    float: left;
+    width: 50%;
+
+}
+.row2{
+    width: 60%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1100px) {
+    .column {
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        background-size: auto;
+    }
+    .InfoContainer{
+        height: auto;
+    }
+}
+a:link{
+    text-decoration: underline;
+    color:white;
+}
+h1{
+    text-align: center;
+    color:white;
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-style: italic;
+    font-family:'Lora', serif;
+}
+
+.textcontent{
+    color:white;
+    text-align: center;
+    background-color:rgba(51,51,51,0.6);
+    width:auto;
+    padding: 5px 20px 20px;
+    margin-top:50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color:#F57D7F;
+}
+p{
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    color:white;
+}
+
+.text-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top:10px;
+}
+
+.date{
+    font-size: 1rem;
+}
+
+.Country, .Global {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-style: italic;
+    font-family:'Lora', serif;
+    text-decoration: underline;
+}
+.Subtext{
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-style: italic;
+    font-family:'Lora', serif;
+}
+.HeaderContainer{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family:'Lora', serif;
+    border-radius: 25px;
+    border-style: solid;
+    border-color:#F57D7F;
+    background-color: rgba(51,51,51,0.4);
+}
+.container {
+    margin-top: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family:'Lora', serif;
+}
+.Info{
+    width:70%;
+}
+.HeaderText{
+    color:white;
+    position: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto auto;
+    font-family:'Lora', serif;
+
+    word-wrap: break-word;
+}
+
+.HeaderContent{
+
+}
+#globalCon{
+    visibility: visible;
+}
+#rightCon{
+    visibility: hidden;
+}
+.InfoContainer{
+    color:white;
+    word-wrap: break-word;
+
+    height: auto;
+    width:800px;
+    padding: 100px;
+    margin: auto auto;
+    font-family:'Lora', serif;
+    border-radius: 25%;
+    border-style: solid;
+    border-color:#F57D7F;
+    background-color: rgba(51,51,51,0.4);
+    display: flex;
+    position: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+.circle {
+    background-color: white;
+    border-radius: 50px;
+    height: 15px;
+    width: 15px;
+    margin: 0 15px;
+}
+.Quantitive {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top:10px;
+}
+
+.SubbierText{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top:10px;
+}
+.top-banner {
+    color: black;
+}
+
+
+
+.top-banner form {
+    padding-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.top-banner form input {
+    background-color: white;
+    font-family:'Lora', serif;
+    font-size: 0.9rem;
+    height: 40px;
+    width: 150px;
+    padding: 5px 5px 10px;
+    border-radius: 10px;
+    color:black;
+}
+
+.top-banner form input::placeholder {
+    color: black;
+}
+
+.top-banner form button {
+    font-family:'Lora', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    margin-left: 15px;
+    border-radius: 5px;
+    color: black;
+    background: white;
+    text-decoration: none;
+    transition: background 0.1s ease-in-out;
+}
+
+.top-banner form button:hover {
+    background: rgba(249, 163, 203, 1);
+}
