@@ -66,7 +66,7 @@ window.addEventListener('load', () => {
             navigator.geolocation.getCurrentPosition((position) => {
                 const lon = position.coords.longitude;
                 const lat = position.coords.latitude;
-                const base = `http://api.geonames.org/countryCodeJSON?lat=${lat}&lng=${lon}&username=jecfe`;
+                const base = `https://api.geonames.org/countryCodeJSON?lat=${lat}&lng=${lon}&username=jecfe`;
                 fetch(base)
                     .then((response) => {
                         return response.json();
