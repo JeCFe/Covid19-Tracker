@@ -22,7 +22,7 @@ body{
     flex-direction: column;
     align-items: center;
 }
-/* Create two equal columns that floats next to each other */
+
 .column {
     float: left;
     width: 50%;
@@ -30,14 +30,13 @@ body{
 
 }
 
-/* Clear floats after the columns */
+
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1100px) {
     .column {
         width: 100%;
@@ -48,6 +47,14 @@ body{
     }
     .InfoContainer{
         height: auto;
+    }
+}
+@media screen and (max-width: 600px){
+    .main-wrap{
+        width: 100%;
+    }
+    .textcontent{
+        width: 100%;
     }
 }
 a:link{
@@ -63,18 +70,26 @@ h1{
     font-family:'Lora', serif;
 }
 
-.textcontent{
-    color:white;
+.textcontent {
+    color: white;
     text-align: center;
-    background-color:rgba(51,51,51,0.6);
-    width:auto;
-    padding: 5px 20px 20px;
-    margin-top:50px;
-    margin-left: 100px;
-    margin-right: 100px;
+    background-color: rgba(51, 51, 51, 0.6);
+    width: 80%;
+    word-wrap: break-word;
+    margin-top: 50px;
+
     border-radius: 25px;
     border-style: solid;
-    border-color:#F57D7F;
+    border-color: #F57D7F;
+
+
+}
+.main-wrap{
+    display: flex;
+    position: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 p{
     width: 100%;
