@@ -27,7 +27,7 @@ body{
     float: left;
     width: 50%;
     padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+
 }
 
 /* Clear floats after the columns */
@@ -237,4 +237,30 @@ p{
 
 .top-banner form button:hover {
     background: rgba(249, 163, 203, 1);
+}
+
+.Chart-Container{
+    margin: 50px;
+    padding: 10px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color:#F57D7F;
+
+background-color: rgba(51,51,51);
+    color: white;
+    display: flex;
+    position: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+
+}
+
+
+#canvas{
+    max-width: 100%;
+    max-height: 100%;
+
 }

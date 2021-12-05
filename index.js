@@ -29,6 +29,7 @@ const GupdateDateOfResults = document.querySelector('.GDateOfResults');
 const form = document.querySelector(".top-banner form");
 const input = document.querySelector(".top-banner input");
 const msg = document.querySelector(".top-banner .msg");
+let chart = null;
 
 function Toggle(){
     let g = document.getElementById('globalCon');
@@ -137,6 +138,8 @@ function UpdateLeftCovidCases(prov){
                     return CountryPop;
                 })
                 .then((pop)=>{
+                    //DisplayGraph(data);
+                    GenerateJson(data);
                     let index = data.length-1;
                     const ResultsDate = data[index].Date;
                     const CountryName = data[index].Country;
@@ -184,5 +187,79 @@ function UpdateLeftCovidCases(prov){
                 })
         })
 }
+function GenerateJson(data){
+    jsonObj = [];
+    for (let i = 0; i < data.length; i++) {
+        if(i === 0){
+            var newCases = data.Confirmed;
+        }
+        else{
+            var newCases = data[i].Confirmed - data[i - 1].Confirmed
+        }
+        if (newCases < 0){
+            newCases = data[i];
+        }
 
+        item = {}
+        item["Date"] = data[i].Date;
+
+        item["NewCases"] = newCases;
+        jsonObj.push(item);
+    }
+    DisplayBarGraph(jsonObj);
+}
+
+
+function DisplayBarGraph(graphData){
+    if(chart != null){
+        chart.destroy();
+    }
+    var xValues = graphData.map(function(e){
+        return e.Date;
+    })
+    var yValues = graphData.map(function(e){
+        return e.NewCases;
+    })
+
+    var ctx = canvas.getContext('2d');
+    var config = {
+        type: 'bar',
+        data:{
+            labels: xValues,
+            datasets: [{
+                label: '# of Covid cases',
+                data: yValues,
+                backgroundColor: 'white',
+            }]
+        },
+
+        options:{
+
+            responsive: true,
+            scales:{
+
+                xAxes:[{
+                    borderColor: 'pink',
+                    display: false,
+                    ticks:{
+                        display: false,
+                    }
+                }],
+                yAxes:[{
+                }],
+            }
+        },
+        legend:{
+            display: true,
+        },
+        plugins:
+            {
+                fillStyle: 'black',
+            },
+
+
+    };
+    chart = new Chart(ctx, config);
+
+}
 const event = new CustomEvent('load', {});
